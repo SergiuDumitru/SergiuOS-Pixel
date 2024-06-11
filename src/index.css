@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0 !important;
+  padding: 0;
+  
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: #212529 !important;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: small;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#desktop {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  flex-grow: 1;
+  width: 100%;
+  overflow: auto;
+  overflow: hidden;
+}
+
+#desktop,
+#settings {
+  width: 100%;
+  height: calc(100vh - 83px);
+  /* Adjust height calculation according to the navbar height */
+}
+
+.parent-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#settings {
+  background-color: rgb(0, 1, 39);
+}
+
+#navLeft,
+#navRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#googleSearch label {
+  padding-right: 20px;
+}
+
+#googleSearch button {
+  margin-left: 20px !important;
+}
+
+.nes-input,
+.nes-textarea {
+  border-image-repeat: repeat !important;
+}
+
+#clock {
+  padding: 10px
+}
+
+.icon {
+  margin-top: 10px !important;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  -webkit-user-select: none;
+  /* Safari */
+  -ms-user-select: none;
+  /* IE 10 and IE 11 */
+  user-select: none;
+  /* Standard syntax */
+}
+
+.icon-selected {
+  background-color: rgba(216, 216, 216, 0.397);
+  border-radius: 5px;
+  clip-path: polygon(0px calc(100% - 16px),
+      4px calc(100% - 16px),
+      4px calc(100% - 12px),
+      8px calc(100% - 12px),
+      8px calc(100% - 8px),
+      12px calc(100% - 8px),
+      12px calc(100% - 4px),
+      16px calc(100% - 4px),
+      16px 100%,
+      calc(100% - 16px) 100%,
+      calc(100% - 16px) calc(100% - 4px),
+      calc(100% - 12px) calc(100% - 4px),
+      calc(100% - 12px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 8px),
+      calc(100% - 8px) calc(100% - 12px),
+      calc(100% - 4px) calc(100% - 12px),
+      calc(100% - 4px) calc(100% - 16px),
+      100% calc(100% - 16px),
+      100% 16px,
+      calc(100% - 4px) 16px,
+      calc(100% - 4px) 12px,
+      calc(100% - 8px) 12px,
+      calc(100% - 8px) 8px,
+      calc(100% - 12px) 8px,
+      calc(100% - 12px) 4px,
+      calc(100% - 16px) 4px,
+      calc(100% - 16px) 0px,
+      16px 0px,
+      16px 4px,
+      12px 4px,
+      12px 8px,
+      8px 8px,
+      8px 12px,
+      4px 12px,
+      4px 16px,
+      0px 16px);
+}
+
+
+.window-navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(1, 8, 77);
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAzElEQVRYR+2X0Q6AIAhF5f8/2jYXZkwEjNSVvVUjDpcrGgT7FUkI2D9xRfQETwNIiWO85wfINfQUEyxBG2ArsLwC0jioGt5zFcwF4OYDPi/mBYKm4t0U8ATgRm3ThFoAqkhNgWkA0jJLvaOVSs7j3qMnSgXWBMiWPXe94QqMBMBc1VZIvaTu5u5pQewq0EqNZvIEMCmxAawK0DNkay9QmfFNAJUXfgGgUkLaE7j/h8fnASkxHTz0DGIBMCnBeeM7AArpUd3mz2x3C7wADglA8BcWMZhZAAAAAElFTkSuQmCC) 14 0, pointer;
+}
+
+.resizeable {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(29, 33, 84);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 4px solid rgb(255, 255, 255);
+}
+
+.window-navbar-left {
+  margin-left: 24px !important;
+}
+
+.window-navbar-right {
+  margin-right: 9px !important;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+#projects {
+  align-self: center;
+}
+
+
+.draggable {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  min-width: 600px;
+  min-height: 500px;
+  width: 600px;
+  height: 500px;
+  background-color: #212429;
+  border: 1px solid #dedede;
+  resize: both;
+  overflow: auto;
+  border: 4px solid white;
+  overflow: hidden;
+}
+
+.draggable-panel {
+  padding: 10px;
+  background-color: #eee;
+  color: #162333;
+
+
+}
+
+.draggable-content {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.active-apps {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px !important;
+  gap: 5px;
+}
+
+.active {
+  background-color: rgb(227, 227, 227);
+
+}
+
+#browser {
+  height: 100%;
+  overflow: hidden;
+
+}
+
+#browser-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  height: 100px
+}
+
+#browser-container {
+  height: 100%;
+  width: 100%;
+
+}
+
+.browser-navigation-right {
+  width: 80%;
+}
+
+.react-terminal-window-buttons {
+  display: none !important;
+}
+
+.react-terminal-wrapper {
+  font-size: 14px !important;
+  height: 90% !important;
+  position: absolute !important;
+  padding: 0 0 0 0 !important;
+}
+
+.react-terminal {
+  max-width: 100%; /* Maximum width is the full width of the parent */
+  max-height: 100%; /* Maximum height is the full height of the parent */
+  position: absolute; /* If you want it positioned inside the wrapper */
+  height: 100% !important;
+  overflow: auto !important;
+}
+
+.react-terminal::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+
+
+.setting{
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 350px;
+  padding: 10px;
+}
+
+.setting > h3{
+  text-align: center;
+  margin-bottom: 10px !important;
+}
+
+.setting > div > input, .setting > div > button{
+  text-align: center;
+  margin-bottom: 8px !important;
+}
+
+#backgroundPreviewContainer{
+  width: 50%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-right: 5px !important;
+}
